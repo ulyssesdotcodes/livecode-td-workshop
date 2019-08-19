@@ -1,3 +1,4 @@
+
 let rect = 
     c.top("rectangle", { 
         size: c.xyp(c.fp(600), c.fp(300)),
@@ -15,6 +16,7 @@ let noise =
         t: c.xyzp(c.fp(0), c.fp(0), c.seconds) ,
     })
 
+
 let noisyrect =
     c.top("composite").run([
         rect,
@@ -26,4 +28,5 @@ let noisyrect =
 
 let n = noisyrect;
 
-return [n.connect(c.top("out")).out()]
+return new Promise((resolve) => setTimeout(resolve, 10000))
+    .then(() => [n.connect(c.top("out")).out()])

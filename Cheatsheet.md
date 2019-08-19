@@ -42,6 +42,32 @@ c.top("composite").run([
 | XYZW | c.xyp(float param, float param, float param, float param) |
 | RGB | c.xyp(float param, float param, float param) |
 | RGBA | c.xyp(float param, float param, float param, float param) |
-| DAT | c.datp(<dat>) |
-| MAT | c.matp(<mat>) |
-| MAT | c.matp(<mat>) |
+| DAT | c.datp(\<dat\>) |
+| MAT | c.matp(\<mat\>) |
+| CHOP | c.chopp(\<chop\>) |
+| TOP | c.topp(\<top\>) |
+| COMP | c.compp(\<comp\>) |
+
+
+### Methods
+
+| TD Method | LD Method|
+| ------------ | ------------ |
+| absTime.seconds | c.seconds |
+| + | c.addp(\<f1\>, \<f2\>) |
+| - | c.subp(\<f1\>, \<f2\>) |
+| * | c.multp(\<f1\>, \<f2\>) |
+| / | c.divp(\<f1\>, \<f2\>) |
+| % | c.modp(\<f1\>, \<f2\>) |
+| ^ | c.powp(\<f1\>, \<f2\>) |
+| math.sin | c.sinp(\<f\>) |
+| math.cos | c.cosp(\<f\>) |
+
+Channel
+
+> `c.chan(<index>, <chop>)`
+
+
+```
+c.chan(c.ip(0), c.chop("wave"))
+```

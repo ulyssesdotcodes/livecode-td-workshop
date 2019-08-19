@@ -2,9 +2,11 @@
 const incrArr = Array.prototype.fill(0, 0, 10)
     .map((_, idx) => idx);
 
-const textTopArr = incrArr.map(value => c.top("text", {
-    text: c.sp(value)
+const textTopArr = [0,1,2,3].map(value => c.top("text", {
+    text: c.sp(value.toString()),
+    dispmethod: c.mp(3),
 }))
+
 
 const n = 
     c.top("composite", { operand: c.mp(2), })
